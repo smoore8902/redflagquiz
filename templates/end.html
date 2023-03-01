@@ -19,28 +19,45 @@
 <script>
 var total_score = 0
 var high_score = 0
+var run = false
+var passed = false
 
 for (let i = 0; i<7; i++){
     local_array = JSON.parse(localStorage.getItem('calcarr' + String(i)))
     for (let j = 0; j<local_array.length; j++){
         high_score += parseInt(local_array[j][1])
         if (local_array[j][2] == true){
+            if (local_array[j][1] == 6){
+                run = true
+            }
             total_score += parseInt(local_array[j][1])
         }
     }
 }
 
-var percentage = total_score
+if (total_score < 100 && run != true){
+    passed = true
 
-const para = document.createElement('p');
-const result = document.createTextNode('Score = ' + String(percentage.toPrecision(4)));
-const maxscore = document.createTextNode(" Cutoff Score = 100")
+}
 
-para.appendChild(result);
-para.appendChild(maxscore);
+
+
+
+const para1 = document.createElement('p');
+const para2 = document.createElement('p');
+const para3 = document.createElement('p');
+const result = document.createTextNode('Score = ' + String(total_score));
+const maxscore = document.createTextNode(" Cutoff Score = 100 ")
+const passedtext = document.createTextNode("Passed = " + String(passed))
+
+para1.appendChild(result);
+para2.appendChild(maxscore);
+para3.appendChild(passedtext);
 
 const element = document.getElementById('div2');
-element.appendChild(para)
+element.appendChild(para1)
+element.appendChild(para2)
+element.appendChild(para3)
 
 </script>
 
