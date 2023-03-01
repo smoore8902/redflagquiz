@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Red Flag Quiz</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>
+        {{category}}
+    </h1>
+</div>
+{% for item in itemlist %}
+
+<div>
+    <input type="checkbox" class="check"></input>
+    <label class="container">{{item[0]}}</label>
+</div>
+{% endfor %}
+<div>
+<a href="{{url_for(nextlink)}}">
+<button class="button" onclick="check_boxes()" >Next</button>
+</a>
+</div>
+
+<script> 
+    function check_boxes(){
+        var truth = {{ itemlist|tojson }};
+        var index = parseInt(localStorage.getItem('Page Index'))
+        console.log(index)
+        check_list = document.getElementsByTagName("input");
+    
+        for (let i = 0; i<check_list.length; i++){
+            if (check_list[i].checked == true){
+                truth[i][2] = true;
+            }
+        }
+        
+        localStorage.setItem('calcarr' + String(index), JSON.stringify(truth));
+        localStorage.setItem("Page Index", String(index += 1))
+    }
+
+</script>
+
+
+{% endblock %}
+

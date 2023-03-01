@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Red Flag Quiz</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>End Page</h1>
+</div>
+<div id="div2">
+
+</div>
+<div>
+<a href="{{url_for(nextlink)}}">
+    <button class="button">Next</button>
+</a>
+</div>
+<script>
+var total_score = 0
+var high_score = 0
+
+for (let i = 0; i<7; i++){
+    local_array = JSON.parse(localStorage.getItem('calcarr' + String(i)))
+    for (let j = 0; j<local_array.length; j++){
+        high_score += parseInt(local_array[j][1])
+        if (local_array[j][2] == true){
+            total_score += parseInt(local_array[j][1])
+        }
+    }
+}
+
+var percentage = (total_score / high_score) * 100
+
+const para = document.createElement('p');
+const result = document.createTextNode('Score = ' + String(percentage.toPrecision(4)));
+para.appendChild(result);
+
+const element = document.getElementById('div2');
+element.appendChild(para)
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Start Page</h1>
+</div>
+<div>
+<a href="{{url_for(nextlink)}}">
+    <button class="button">Next</button>
+</a>
+</div>
+
+<script>
+    localStorage.setItem('Page Index', '0')
+</script>
+
+{% endblock %}
