@@ -16,8 +16,12 @@ for filename in os.listdir(directory):
         csv_dict[filename] = np.asarray(pd.read_csv(directory + filename)).tolist()
 
 
-@app.route('/')
-def index():
+#@app.route('/')
+#def index():
+#    return render_template('home.html', redflaglinkw = 'redflagquizw', greenflaglinkw = 'redflagquizw')
+
+@app.route('/') #redflagquiz
+def redflagquizm():
     return render_template('start.html',nextlink='appearance')
 
 @app.route('/appearance')
@@ -50,7 +54,7 @@ def social():
 
 @app.route('/end')
 def end():
-    return render_template('end.html',nextlink='index')
+    return render_template('end.html',nextlink='redflagquizm')
 
 
 

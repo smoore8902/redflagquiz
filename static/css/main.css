@@ -15,8 +15,9 @@ div{
     
     width: 75%;
 }
-.button {
-    background-color: #2b29a5; /* Green */
+
+.button{
+    background-color: #1d50da; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -25,8 +26,34 @@ div{
     display: inline-block;
     margin: auto;
     width: 50%;
+   
   }
 
+.buttonr {
+    background-color: #eb1313; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
+    width: 50%;
+   
+  }
+
+  .buttong {
+    background-color: #0f8a34; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
+    width: 50%;
+    
+  }
 .check{
     min-height: 24px;
     min-width: 24px;
