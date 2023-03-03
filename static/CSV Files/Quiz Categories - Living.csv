@@ -1,13 +1,21 @@
-Description,Score
-no vacuum,3
-no bedframe,3
-empty boxes as furniture,2
-missing key kitchen items,3
-Can't drive without good reason,3
-Really bad driver,5
-Drunk driver ,6
-women's toiletries in bathrrom,3
-dirty living space,5
-can't keep living thing alive ,4
-uses alcohol bottles as decoration,2
-posters of women cars etc,1
+Description,Score,description 
+Doesn't own a vacuum ,3,
+No bedframe,3,
+Uses empty boxes as furniture ,2,
+missing key kitchen items,3,
+Can't drive without good reason,3,
+Bad driver,5,
+Drunk driver ,6,
+Womens conditioner in the bathroom,3,
+dirty living space,5,
+Cant keep a plant alive ,4,
+uses alcohol bottles as decoration,2,
+posters of women cars etc,1,
+No Fruits and Veggies in the fridge ,3,
+doesn't have handsoap in bathroom,6,
+1 pillow on bed,2,
+dead toothbrush,6,
+political flag somewhere,6,
+exclusivly uses flavored toothpaste,5,
+owns cube car,4,
+can't swim,5,
